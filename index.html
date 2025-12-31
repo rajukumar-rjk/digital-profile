@@ -212,66 +212,70 @@
             font-size: 14px;
         }
 
-        .skills-table-modern {
+        .skills-table-bars {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
             margin-top: 14px;
-            font-size: 15px;
             background: #ffffff;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
         }
 
-        /* Header */
-        .skills-table-modern th {
+        .skills-table-bars th {
             background: #f1f5f9;
-            color: #111827;
-            font-weight: 700;
-            padding: 14px 16px;
+            padding: 14px;
             text-align: left;
+            font-weight: 700;
             border-bottom: 2px solid #e5e7eb;
         }
 
-        /* Body cells */
-        .skills-table-modern td {
+        .skills-table-bars td {
             padding: 16px;
             vertical-align: top;
-            color: #374151;
             border-right: 1px solid #e5e7eb;
         }
 
-        /* Remove right border from last column */
-        .skills-table-modern td:last-child,
-        .skills-table-modern th:last-child {
+        .skills-table-bars td:last-child,
+        .skills-table-bars th:last-child {
             border-right: none;
         }
 
-        /* Lists */
-        .skills-table-modern ul {
-            margin: 0;
-            padding-left: 18px;
+        /* Skill item */
+        .skill-item {
+            margin-bottom: 14px;
         }
 
-        .skills-table-modern li {
-            margin-bottom: 8px;
+        .skill-item span {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            color: #111827;
         }
 
-        /* Hover effect */
-        .skills-table-modern tbody tr:hover {
-            background: #f9fafb;
-            transition: background 0.2s ease;
+        /* Bar */
+        .bar {
+            width: 100%;
+            height: 12px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
-        /* Responsive: stack columns */
+        .fill {
+            height: 100%;
+            background: #4f7df3;
+            border-radius: 20px;
+        }
+
+        /* Responsive */
         @media (max-width: 900px) {
-            .skills-table-modern {
+            .skills-table-bars {
                 display: block;
                 overflow-x: auto;
             }
         }
-
 
     </style>
 </head>
@@ -306,10 +310,11 @@
             I am a quantitative researcher interested in how AI and digital technologies interact with organizational design, measurement, and decision-making. My work combines econometric analysis with applied research in business and field settings to study how AI-enabled systems shape behavior and performance inside organizations. I am particularly interested in how metrics, incentives, and technology adoption influence outcomes at scale.
         </p>
     </div>
+
     <!-- SKILLS -->
     <div class="card" id="skills">
         <div class="section-title">Skills</div>
-        <table class="skills-table-modern">
+        <table class="skills-table-bars">
             <thead>
             <tr>
                 <th>Statistical & Programming Tools</th>
@@ -320,33 +325,61 @@
             </thead>
             <tbody>
             <tr>
+                <!-- Column 1 -->
                 <td>
-                    <ul>
-                        <li>Python (data cleaning, exploratory analysis)</li>
-                        <li>R (statistical analysis, regression modeling)</li>
-                        <li>STATA (econometric analysis, panel and observational data)</li>
-                    </ul>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="bar"><div class="fill" style="width: 70%"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>R</span>
+                        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>STATA</span>
+                        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+                    </div>
                 </td>
 
+                <!-- Column 2 -->
                 <td>
-                    <ul>
-                        <li>Power BI (analytical dashboards, longitudinal tracking)</li>
-                        <li>Tableau (comparative and exploratory visualization)</li>
-                        <li>Advanced Excel (data manipulation, financial and operational analysis)</li>
-                    </ul>
+                    <div class="skill-item">
+                        <span>Power BI</span>
+                        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Tableau</span>
+                        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Advanced Excel</span>
+                        <div class="bar"><div class="fill" style="width: 88%"></div></div>
+                    </div>
                 </td>
 
+                <!-- Column 3 -->
                 <td>
-                    <ul>
-                        <li>SPSS (survey analysis, descriptive and inferential statistics)</li>
-                        <li>Qualtrics (survey design and administration)</li>
-                    </ul>
+                    <div class="skill-item">
+                        <span>SPSS</span>
+                        <div class="bar"><div class="fill" style="width: 100%"></div></div>
+                    </div>
+
+                    <div class="skill-item">
+                        <span>Qualtrics</span>
+                        <div class="bar"><div class="fill" style="width: 100%"></div></div>
+                    </div>
                 </td>
 
+                <!-- Column 4 -->
                 <td>
-                    <ul>
-                        <li>ArcGIS (spatial analysis, mapping, regional heterogeneity analysis)</li>
-                    </ul>
+                    <div class="skill-item">
+                        <span>ArcGIS</span>
+                        <div class="bar"><div class="fill" style="width: 78%"></div></div>
+                    </div>
                 </td>
             </tr>
             </tbody>
