@@ -211,6 +211,68 @@
             color: #6b7280;
             font-size: 14px;
         }
+
+        .skills-table-modern {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 14px;
+            font-size: 15px;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Header */
+        .skills-table-modern th {
+            background: #f1f5f9;
+            color: #111827;
+            font-weight: 700;
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        /* Body cells */
+        .skills-table-modern td {
+            padding: 16px;
+            vertical-align: top;
+            color: #374151;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        /* Remove right border from last column */
+        .skills-table-modern td:last-child,
+        .skills-table-modern th:last-child {
+            border-right: none;
+        }
+
+        /* Lists */
+        .skills-table-modern ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .skills-table-modern li {
+            margin-bottom: 8px;
+        }
+
+        /* Hover effect */
+        .skills-table-modern tbody tr:hover {
+            background: #f9fafb;
+            transition: background 0.2s ease;
+        }
+
+        /* Responsive: stack columns */
+        @media (max-width: 900px) {
+            .skills-table-modern {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -247,31 +309,49 @@
     <!-- SKILLS -->
     <div class="card" id="skills">
         <div class="section-title">Skills</div>
+        <table class="skills-table-modern">
+            <thead>
+            <tr>
+                <th>Statistical & Programming Tools</th>
+                <th>Data Analysis & Visualization</th>
+                <th>Survey, Field & Behavioral Data Tools</th>
+                <th>Geospatial & Spatial Analysis</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Python (data cleaning, exploratory analysis)</li>
+                        <li>R (statistical analysis, regression modeling)</li>
+                        <li>STATA (econometric analysis, panel and observational data)</li>
+                    </ul>
+                </td>
 
-        <div class="skill">
-            <span>International Business Strategy</span>
-            <div class="skill-bar"><div class="skill-fill" style="--level: 90%"></div></div>
-        </div>
+                <td>
+                    <ul>
+                        <li>Power BI (analytical dashboards, longitudinal tracking)</li>
+                        <li>Tableau (comparative and exploratory visualization)</li>
+                        <li>Advanced Excel (data manipulation, financial and operational analysis)</li>
+                    </ul>
+                </td>
 
-        <div class="skill">
-            <span>Market Analysis & Strategy</span>
-            <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
-        </div>
+                <td>
+                    <ul>
+                        <li>SPSS (survey analysis, descriptive and inferential statistics)</li>
+                        <li>Qualtrics (survey design and administration)</li>
+                    </ul>
+                </td>
 
-        <div class="skill">
-            <span>Cross-Cultural Leadership</span>
-            <div class="skill-bar"><div class="skill-fill" style="--level: 80%"></div></div>
-        </div>
+                <td>
+                    <ul>
+                        <li>ArcGIS (spatial analysis, mapping, regional heterogeneity analysis)</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-        <div class="skill">
-            <span>Data-Driven Decision Making</span>
-            <div class="skill-bar"><div class="skill-fill" style="--level: 75%"></div></div>
-        </div>
-
-        <div class="skill">
-            <span>Strategic Communication</span>
-            <div class="skill-bar"><div class="skill-fill" style="--level: 70%"></div></div>
-        </div>
     </div>
 
     <!-- PROJECTS -->
